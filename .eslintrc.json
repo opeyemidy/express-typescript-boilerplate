@@ -1,24 +1,36 @@
 {
-	"env": {
-		"commonjs": true,
-		"es2021": true,
-		"node": true
-	},
-	"extends": [
-		"eslint:recommended",
-		"plugin:@typescript-eslint/recommended",
-		"prettier"
-	],
-	"overrides": [],
-	"parser": "@typescript-eslint/parser",
-	"parserOptions": {
-		"ecmaVersion": "latest"
-	},
-	"plugins": ["@typescript-eslint"],
-	"rules": {
-		"indent": ["error", 4],
-		"linebreak-style": ["error", "unix"],
-		"quotes": ["error", "double"],
-		"semi": ["error", "never"]
-	}
+    "env": {
+        "commonjs": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier"
+    ],
+    "overrides": [],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "plugins": ["@typescript-eslint"],
+    "rules": {
+        "indent": ["error", 4],
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["error", "double"],
+        "semi": ["error", "never"],
+        "camelcase": ["error", { "properties": "always" }]
+        // "@typescript-eslint/restrict-plus-operands": "error",
+        // "eslint prefer-template": 2
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [".js", ".jsx", ".ts", ".tsx", ".json"],
+                "tryExtensions": [".js", ".json", ".node", ".ts", ".d.ts"],
+                "moduleDirectory": ["node_modules", "src"]
+            }
+        }
+    }
 }
