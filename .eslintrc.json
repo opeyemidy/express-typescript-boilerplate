@@ -7,15 +7,19 @@
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
-        "prettier"
+        "plugin:prettier/recommended"
     ],
     "overrides": [],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaVersion": "latest"
+        "ecmaVersion": "latest",
+        "project": ["./tsconfig.json"]
     },
     "plugins": ["@typescript-eslint"],
     "rules": {
+        "prettier/prettier": "error",
+        "@typescript-eslint/no-unsafe-argument": "error",
+        "@typescript-eslint/no-explicit-any": "error",
         "indent": ["error", 4],
         "linebreak-style": ["error", "unix"],
         "quotes": ["error", "double"],
