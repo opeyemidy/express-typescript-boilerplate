@@ -32,7 +32,7 @@
         "xss-clean": "^0.1.1"
     },
     "scripts": {
-        "dev": "ts-node-dev --inspect= 0.0.0.0:9229 --exit-child --respawn -r tsconfig-paths/register src/index.ts",
+        "dev": "ts-node-dev --inspect=0.0.0.0:9229 --exit-child --respawn -r tsconfig-paths/register src/index.ts",
         "build": "npx tsc && tsc-alias && npx tscp",
         "start": "node dist/index.js",
         "lint": "eslint ./src/**/*.ts",

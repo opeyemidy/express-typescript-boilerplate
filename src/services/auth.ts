@@ -5,12 +5,6 @@ import { userService, tokenService } from "services"
 import { TokenEnum } from "@config"
 import { Types } from "mongoose"
 
-/**
- * Login with username and password
- * @param {string} email
- * @param {string} password
- * @returns {Promise<User>}
- */
 const loginUserWithEmailAndPassword = async (
     email: string,
     password: string
@@ -25,11 +19,6 @@ const loginUserWithEmailAndPassword = async (
     return user
 }
 
-/**
- * Logout
- * @param {string} refreshToken
- * @returns {Promise<void>}
- */
 const logout = async (refreshToken: string): Promise<void> => {
     const refreshTokenDoc = await Token.findOne({
         token: refreshToken,
@@ -42,11 +31,6 @@ const logout = async (refreshToken: string): Promise<void> => {
     await refreshTokenDoc.remove()
 }
 
-/**
- * Refresh auth tokens
- * @param {string} refreshToken
- * @returns {Promise<Object>}
- */
 const refreshAuth = async (refreshToken: string) => {
     try {
         const refreshTokenDoc = await tokenService.verifyToken(
@@ -64,12 +48,6 @@ const refreshAuth = async (refreshToken: string) => {
     }
 }
 
-/**
- * Reset password
- * @param {string} resetPasswordToken
- * @param {string} newPassword
- * @returns {Promise}
- */
 const resetPassword = async (
     resetPasswordToken: string,
     newPassword: string
@@ -95,11 +73,6 @@ const resetPassword = async (
     }
 }
 
-/**
- * Verify email
- * @param {string} verifyEmailToken
- * @returns {Promise}
- */
 const verifyEmail = async (verifyEmailToken: string) => {
     try {
         const verifyEmailTokenDoc = await tokenService.verifyToken(
