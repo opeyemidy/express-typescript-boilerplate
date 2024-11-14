@@ -1,5 +1,5 @@
 {
-    "name": "express-typescript",
+    "name": "express-typescript-boilerplate",
     "version": "1.0.0",
     "main": "index.js",
     "license": "MIT",
@@ -39,9 +39,6 @@
         "lint:fix": "eslint ./src/**/*.ts --fix",
         "format": "prettier --write .",
         "format:check": "prettier --check .",
-        "test": "jest -c jest.config.js --env=node",
-        "test:cov": "jest -c jest.config.js --coverage --env=node",
-        "test:watch": "jest -c jest.config.js -i --watchAll",
         "loglevel:change": "runtime-node-refresh",
         "prepare": "husky"
     },

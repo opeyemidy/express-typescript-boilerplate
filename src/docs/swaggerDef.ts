@@ -3,7 +3,7 @@ import { envVars } from "@config"
 const swaggerDef = {
     openapi: "3.0.0",
     info: {
-        title: "node-express-boilerplate API documentation",
+        title: "node-express-typescript-boilerplate API documentation",
         version: "1.0.0",
         license: {
             name: "MIT",
